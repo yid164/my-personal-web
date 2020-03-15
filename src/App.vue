@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-content transition="slide-x-transition">
-      <router-link to="/">Home</router-link> |
+      <v-btn to="/">Home</v-btn>|
       <router-link to="/profile">Profile</router-link> |
       <router-link to="/skills">Skills</router-link> |
       <router-link to="/experience">Experience</router-link> |
