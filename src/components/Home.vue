@@ -1,6 +1,8 @@
 <template>
     <v-app>
-        This is Home
+        <v-banner>
+
+        </v-banner>
     </v-app>
 </template>
 

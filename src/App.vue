@@ -1,13 +1,22 @@
 <template>
   <v-app>
-    <v-navigation-drawer app permanent>
-      <v-list-item>
-        <v-list-item-title class="title">
-          Ken
-        </v-list-item-title>
-        <v-list-item-subtitle class="subtitle-2">
-          A job seeker
-        </v-list-item-subtitle>
+    <v-navigation-drawer app
+                         v-model="drawer"
+                         :expand-on-hover="expandOnHover"
+                         :mini-variant="miniVariant"
+                         dark
+                         right
+                          >
+      <v-list-item :class="miniVariant && 'pa-2'">
+        <v-list-item-avatar>
+            <img src="./assets/myPic.png">
+        </v-list-item-avatar>
+        <v-list-item link>
+          <v-list-item-content>
+            <v-list-item-title class="title">Ken Dong</v-list-item-title>
+            <v-list-item-subtitle>yinsheng.dong@usask.ca</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
       </v-list-item>
       <v-divider></v-divider>
       <v-list dense nav>
@@ -19,13 +28,14 @@
           <v-list-item-content>
             <v-list-item-title> {{ item.title }} </v-list-item-title>
           </v-list-item-content>
+
         </v-list-item>
+        <v-divider></v-divider>
 
       </v-list>
     </v-navigation-drawer>
 
     <v-app-bar app>
-        app-bar
     </v-app-bar>
 
     <v-content>
@@ -33,8 +43,8 @@
         <router-view></router-view>
       </v-container>
 
-      <v-footer>
-
+      <v-footer dark padless>
+        Written by Yinsheng Dong @ 2020
       </v-footer>
     </v-content>
   </v-app>
@@ -49,15 +59,26 @@ export default {
   },
   data () {
     return{
+      drawer: true,
       items: [
-        {title: 'Home', icon: 'mdi-view-dashboard', to: '/'},
-        {title: 'Profile', icon: 'mdi-view-dashboard', to: '/profile'},
-        {title: 'Skills', icon: 'mdi-view-dashboard', to: '/skills'},
-        {title: 'Projects', icon: 'mdi-view-dashboard', to: '/project'},
-        {title: 'Experience', icon: 'mdi-view-dashboard', to: '/experience'},
-        {title: 'Contacts', icon: 'mdi-view-dashboard', to: '/contact'}
+        {title: 'Home', icon: 'mdi-home', to: '/'},
+        {title: 'Profile', icon: 'mdi-account', to: '/profile'},
+        {title: 'Skills', icon: 'mdi-code-braces-box', to: '/skills'},
+        {title: 'Projects', icon: 'mdi-codepen', to: '/projects'},
+        {title: 'Experience', icon: 'mdi-bike', to: '/experience'},
+        {title: 'Contacts', icon: 'mdi-mail', to: '/contact'}
 
-      ]
+      ],
+      color: 'primary',
+      colors: [
+              'primary',
+              'blue',
+              'success',
+              'read',
+              'teal'
+      ],
+      miniVariant: true,
+      expandOnHover: true
     }
   }
 }
