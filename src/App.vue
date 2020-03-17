@@ -11,7 +11,7 @@
         <v-list-item-avatar>
             <img src="./assets/myPic.png">
         </v-list-item-avatar>
-        <v-list-item link>
+        <v-list-item link :to="'/contact'">
           <v-list-item-content>
             <v-list-item-title class="title">Ken Dong</v-list-item-title>
             <v-list-item-subtitle>yinsheng.dong@usask.ca</v-list-item-subtitle>
@@ -57,6 +57,11 @@ export default {
   name: 'App',
   components: {
   },
+  methods:{
+    sendEmail(){
+      window.open('mailto:yinsheng.dong@usask.ca');
+    }
+  },
   data () {
     return{
       drawer: true,
@@ -80,6 +85,7 @@ export default {
       miniVariant: true,
       expandOnHover: true
     }
+
   }
 }
 </script>
