@@ -41,6 +41,11 @@ const routes = [
         path:'/skills',
         name: 'skills',
         component: Skills
+    },
+    {
+        path:'/summary',
+        name: 'summary',
+        component:Summary
     }
 ];
 

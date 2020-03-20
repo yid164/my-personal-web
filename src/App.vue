@@ -11,7 +11,7 @@
         <v-list-item-avatar>
             <img src="./assets/myPic.png">
         </v-list-item-avatar>
-        <v-list-item link :to="'/contact'">
+        <v-list-item link :to="'/summary'">
           <v-list-item-content>
             <v-list-item-title class="title">Ken Dong</v-list-item-title>
             <v-list-item-subtitle>yinsheng.dong@usask.ca</v-list-item-subtitle>
