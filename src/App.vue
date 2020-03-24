@@ -5,8 +5,7 @@
                          :expand-on-hover="expandOnHover"
                          :mini-variant="miniVariant"
                          dark
-                         right
-                          >
+                         left>
       <v-list-item :class="miniVariant && 'pa-2'">
         <v-list-item-avatar>
             <img src="./assets/myPic.png">
