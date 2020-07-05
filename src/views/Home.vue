@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <HomeComp></HomeComp>
+    <Banner></Banner>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HomeComp from "@/components/HomeComp";
+import Banner from "../components/Banner";
 
 export default {
   name: 'Home',
   components: {
-    HomeComp
+    Banner
   }
 }
 </script>
