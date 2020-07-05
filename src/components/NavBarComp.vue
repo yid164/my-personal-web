@@ -1,9 +1,9 @@
 <template>
     <nav>
-        <v-app-bar elevate-on-scroll class="indigo lighten-1" app>
+        <v-app-bar elevate-on-scroll class="blue-grey darken-4" app>
             <v-app-bar-nav-icon class="white--text" @click="drawer=!drawer"></v-app-bar-nav-icon>
             <v-toolbar-title class="white--text">
-                <span>Welcome to Ken's Page</span>
+                <span>Ken's Page</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <!-- Translate Button -->
@@ -47,14 +47,14 @@
         data(){
             return {
                 drawer: false,
-                color: "indigo lighten-1",
+                color: "blue-grey darken-4",
                 right: false,
                 miniVariant: false,
                 expandOnHover: false,
                 background: false,
 
                 route_list: [
-                    {text: "Home", icon: "mdi-home", route: "/home"},
+                    {text: "Home", icon: "mdi-home", route: "/"},
                     {text: "About", icon: "mdi-information", route: "/about"},
                     {text: "Projects", icon: "mdi-post-outline", route: "/project"},
                     {text: "Timeline", icon: "mdi-timeline-text", route: "/timeline"},

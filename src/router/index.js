@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import Contacts from "../views/Contacts";
 import MyProfile from "../views/MyProfile";
 import Experience from "../views/Experience";
+import Timeline from "../views/Timeline";
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ Vue.use(VueRouter)
       path: '/contacts',
       name: 'Contacts',
       component: Contacts
+    },
+    {
+      path: '/timeline',
+      name: 'Timeline',
+      component: Timeline
     }
 ];
 

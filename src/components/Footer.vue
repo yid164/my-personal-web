@@ -1,6 +1,6 @@
 <template>
 
-    <v-footer class="indigo lighten-1" height="85">
+    <v-footer class="blue-grey darken-4" height="85">
         <v-container fluid class="text-center">
             <v-layout>
                 <v-flex md2 ></v-flex>

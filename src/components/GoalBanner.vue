@@ -5,8 +5,8 @@
             <v-col v-for="(goal, i) in goals" :key="i" class="d-flex" cols="12" sm="6" md="4">
                 <v-card outlined max-width="100%">
                     <v-img :src="goal.src" max-height="200"/>
-                        <v-card-title class="align-start" style="min-height: 88px;" v-text="goal.title"/>
-                        <v-card-text class="pb-5 pt-3" v-text="goal.article"/>
+                    <v-card-title class="align-start" style="min-height: 88px;" v-text="goal.title"/>
+                    <v-card-text class="pb-5 pt-3" v-text="goal.article"/>
                 </v-card>
             </v-col>
         </v-row>
