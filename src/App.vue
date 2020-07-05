@@ -1,32 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <NavBarComp></NavBarComp>
+    <v-content>
+      <router-view></router-view>
+    </v-content>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+  import NavBarComp from "./components/NavBarComp";
+  export default {
+    name: 'App',
 
-#nav {
-  padding: 30px;
-}
+    provide(){
+      return{
+        reload: this.reload,
+      }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    },
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+    components: {
+      NavBarComp
+    },
+
+    data(){
+      return{
+        isRouterAlive: true
+      }
+    },
+
+    methods:{
+      reload(){
+        this.isRouterAlive = false;
+        this.$nextTick(function () {
+          this.isRouterAlive = true
+        })
+      }
+    },
+  };
+</script>
