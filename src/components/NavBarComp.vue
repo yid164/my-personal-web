@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <v-app-bar elevate-on-scroll class="blue darken-4" app>
+        <v-app-bar elevate-on-scroll class="indigo lighten-1" app>
             <v-app-bar-nav-icon class="white--text" @click="drawer=!drawer"></v-app-bar-nav-icon>
             <v-toolbar-title class="white--text">
                 <span>Welcome to Ken's Page</span>
@@ -37,26 +37,6 @@
                     </v-list-item>
                 </v-list>
 
-                <v-flex class="grey--text darken-4">
-                    <p class="white--text text-center">Contact Me</p>
-                    <v-flex class="d-flex flex-row ">
-                        <v-btn @click="">
-                            <v-icon class="mr-0">mdi-email</v-icon>
-                        </v-btn>
-                        <v-btn class="teal--text" @click="">
-                            <v-icon class="mr-0">mdi-github</v-icon>
-                        </v-btn>
-                    </v-flex>
-                    <v-flex class="d-flex flex-row text-center">
-                        <v-btn @click="">
-                            <v-icon class="mr-0">mdi-facebook</v-icon>
-                        </v-btn>
-                        <v-btn @click="">
-                            <v-icon class="mr-0">mdi-linkedin</v-icon>
-                        </v-btn>
-                    </v-flex>
-                </v-flex>
-
             </v-layout>
         </v-navigation-drawer>
     </nav>
@@ -67,7 +47,7 @@
         data(){
             return {
                 drawer: false,
-                color: "blue darken-4",
+                color: "indigo lighten-1",
                 right: false,
                 miniVariant: false,
                 expandOnHover: false,
