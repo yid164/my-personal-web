@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="display-1 font-weight-light text-center grey--text mb-4">Personal Timeline</h2>
+        <HeadTitle>Ken's Timeline</HeadTitle>
         <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown" class="mx-10">
             <v-timeline-item
                 v-for="(item, i) in times"
@@ -31,26 +31,33 @@
 </template>
 
 <script>
+    import HeadTitle from "../components/HeadTitle";
     export default {
         name: "Timeline",
+        components: {HeadTitle},
+        comments:{
+            HeadTitle
+        },
         data(){
             return{
-                tags:[
-                    {name: "Development", icon: "mdi-developer-board", color: "red accent-3"},
-                    {name: "Video", icon: "mdi-video", color: "pick accent-4"},
-                    {name: "Music", icon: "mdi-music-circle", color: "blue accent-3"},
-                    {name: "Education", icon: "mdi-cast-education", color: "teal darken-3"},
-
-                ],
                 times:[
                     {
                         title: "Personal Web App Development",
                         type: "Development",
-                        time: "2020-06-01",
+                        time: "2020-07",
                         status: "In-Process",
                         color: "red accent-3",
                         icon: "mdi-developer-board",
                         content: "To develop my own website by using Vue.js + Vuetify."
+                    },
+                    {
+                        title: "Customer Service",
+                        type: "Work",
+                        time: "2020-04 to 2020-06",
+                        status: "Leave",
+                        color: "black accent-3",
+                        icon: "mdi-room-service",
+                        content: "To survive myself, I got work to earn money"
                     },
                     {
                         title: "Learn Go Web Backend",
@@ -112,7 +119,7 @@
                         time: "2019-05-01",
                         status: "Finished",
                         color: "teal darken-3",
-                        icon: "mdi-book-variant",
+                        icon: "mdi-layers-triple",
                         content: "I finished my undergraduate program at University of Saskatchewan."
                     },
                     {
@@ -158,7 +165,7 @@
                         time: "2015-05-1",
                         status: "Finished",
                         color: "teal darken-3",
-                        icon: "mdi-book-variant",
+                        icon: "mdi-layers-triple",
                         content: "I became an undergraduate student at University of Saskatchewan."
                     },
                     {

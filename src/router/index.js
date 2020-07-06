@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Contacts from "../views/Contacts";
-import MyProfile from "../views/MyProfile";
+import About from "../views/About";
 import Experience from "../views/Experience";
 import Timeline from "../views/Timeline";
 
@@ -15,9 +15,9 @@ Vue.use(VueRouter)
       component: Home
     },
     {
-      path: '/my_profile',
-      name: 'MyProfile',
-      component: MyProfile
+      path: '/about',
+      name: 'About',
+      component: About
     },
     {
       path: '/experience',

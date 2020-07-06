@@ -2,6 +2,6 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
-  "publicPath":"/ken/"
+  publicPath: '/my-personal-web/'
 
 }
