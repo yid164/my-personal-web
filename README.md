@@ -1,5 +1,9 @@
 # my-personal-web
 
+## Project Deploy
+
+See [My Personal Web](https://yid164.github.io/my-personal-web/).
+
 ## Project setup
 ```
 npm install
