@@ -1,10 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Contacts from "../views/Contacts";
 import About from "../views/About";
-import Experience from "../views/Experience";
 import Timeline from "../views/Timeline";
+import Projects from "../views/Projects";
+import Blogs from "../views/Blogs";
+import Gallery from "../views/Gallery";
 
 Vue.use(VueRouter)
 
@@ -20,19 +21,24 @@ Vue.use(VueRouter)
       component: About
     },
     {
-      path: '/experience',
-      name: 'Experience',
-      component: Experience
+      path: '/blogs',
+      name: 'Blogs',
+      component: Blogs
     },
     {
-      path: '/contacts',
-      name: 'Contacts',
-      component: Contacts
+      path: '/projects',
+      name: 'Projects',
+      component: Projects
     },
     {
       path: '/timeline',
       name: 'Timeline',
       component: Timeline
+    },
+    {
+      path: '/gallery',
+      name: 'Gallery',
+      component: Gallery
     }
 ];
 

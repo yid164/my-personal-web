@@ -58,22 +58,22 @@
                     {
                         img: require('../assets/code.jpg'),
                         article: "Code Projects",
-                        content: "I made many course projects during my university life and individual projects"
+                        content: "Here will show a shortcut of my projects"
                     },
                     {
                         img: require('../assets/Music.png'),
                         article: "Music Lists",
-                        content: "I am a listener who loves music"
+                        content: "Here will show a music player for the music that I love"
                     },
                     {
                         img: require('../assets/Videos.jpg'),
                         article: "Video Works",
-                        content: "I am a passionate video viewer and photographer"
+                        content: "Here will show a video player (maybe Youtube) for the videos that I produced"
                     },
                     {
                         img: require('../assets/Games.jpg'),
                         article: "Games Lover",
-                        content: "I am an active game player"
+                        content: "Games"
                     }
                 ]
             }

@@ -1,12 +1,12 @@
 <template>
-    <div>
-        This is Profile Page
+    <div class="blogs">
+        Blogs Info Coming Soon
     </div>
 </template>
 
 <script>
     export default {
-        name: "MyProfileComp"
+        name: "Blogs",
     }
 </script>
 

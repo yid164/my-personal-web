@@ -27,7 +27,8 @@
                         <v-btn
                             large
                             class="px-5 white--text"
-                            color="indigo dark-4">
+                            color="indigo dark-4"
+                            @click="sendEmail">
                             Contact Me!
                         </v-btn>
                     </v-col>
@@ -40,7 +41,12 @@
 
 <script>
     export default {
-        name: "Banner"
+        name: "Banner",
+        methods:{
+            sendEmail(){
+                window.open("mailto:yinsheng.dong@usask.ca")
+            }
+        }
     }
 </script>
 

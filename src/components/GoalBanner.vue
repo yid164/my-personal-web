@@ -21,18 +21,18 @@
                 goals:[
                     {
                         title: "Teamwork",
-                        article: "",
+                        article: "I hope I could join a industrial team and work for them, then I could improve my teamwork skills",
                         src: require('../assets/Teamwork.jpg')
 
                     },
                     {
                         title: "Problem Solving",
-                        article: "",
+                        article: "To challenge different problems is also my goal. Never Abandon, Never Give Up",
                         src: require('../assets/problem-solving.png')
                     },
                     {
                         title: "Technical Skills",
-                        article: "",
+                        article: "Learning new skills is one of my career goal. To provide the best solution for different client require to learn new skills",
                         src: require('../assets/TechnicalSkills.jpg')
                     }
                 ]

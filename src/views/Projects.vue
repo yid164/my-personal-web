@@ -1,12 +1,12 @@
 <template>
-    <div>
-        This experiences
+    <div class="project">
+        Project Coming Soon
     </div>
 </template>
 
 <script>
     export default {
-        name: "ExperienceComp"
+        name: "Experience",
     }
 </script>
 

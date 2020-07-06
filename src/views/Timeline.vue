@@ -174,7 +174,7 @@
                         time: "2012-09-21",
                         status: "Finished",
                         color: "teal darken-3",
-                        icon: "mdi-book-variant",
+                        icon: "mdi-layers-triple",
                         content: "I first came to Canada, and learning English in English as Second Language Department (ESL) at University of Saskatchewan."
                     },
                 ]

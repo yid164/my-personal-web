@@ -7,12 +7,13 @@
                 <v-flex md8 class="white--text pt-0 text-xs-center">
 
                         <v-btn
-                                v-for="icon in icons"
-                                :key="icon"
+                                v-for="item in links"
+                                :key="item.name"
                                 class="mx-4 white--text"
                                 icon
+                                @click="toPage(item.url)"
                         >
-                            <v-icon size="24px">{{ icon }}</v-icon>
+                            <v-icon size="24px">{{ item.icon }}</v-icon>
                         </v-btn>
 
                          <p class="white--text">
@@ -24,46 +25,26 @@
             </v-layout>
         </v-container>
     </v-footer>
-<!-- <v-footer-->
-<!--     dark-->
-<!--     app>-->
-<!--     <v-row justify="center"-->
-<!--             no-gutters-->
-<!--            class="text-center"-->
-<!--     >-->
-<!--         <v-layout class="justify-center grow" row wrap>-->
-<!--             <v-flex class="text-center">-->
-<!--                 <v-btn-->
-<!--                         v-for="icon in icons"-->
-<!--                         :key="icon"-->
-<!--                         class="mx-4 white&#45;&#45;text"-->
-<!--                         icon-->
-<!--                 >-->
-<!--                     <v-icon size="24px">{{ icon }}</v-icon>-->
-<!--                 </v-btn>-->
-<!--             </v-flex>-->
-<!--         </v-layout>-->
-
-<!--         <v-divider></v-divider>-->
-
-<!--         <v-card-text class="white&#45;&#45;text">-->
-<!--             {{ new Date().getFullYear() }} — <strong>Vuetify</strong>-->
-<!--         </v-card-text>-->
-<!--     </v-row>-->
-<!-- </v-footer>-->
 </template>
 
 <script>
     export default {
         name: "Footer",
         data: () => ({
-            icons: [
-                'mdi-facebook',
-                'mdi-twitter',
-                'mdi-linkedin',
-                'mdi-instagram',
+            links: [
+                {name:"facebook", icon:'mdi-facebook', url:"https://www.facebook.com/profile.php?id=100004482271108"},
+                {name:"twitter", icon:'mdi-twitter', url:"https://twitter.com/smallofyou"},
+                {name:"linkedin", icon:'mdi-linkedin', url:"https://www.linkedin.com/in/yinshengdong/"},
+                {name:"github", icon:'mdi-github', url:"https://github.com/yid164"},
+                {name:"instagram", icon: 'mdi-instagram', url: ""},
+                {name:"email", icon: 'mdi-email', url:"mailto:yinsheng.dong@usask.ca"}
             ],
         }),
+        methods:{
+            toPage(url){
+                window.open(url)
+            }
+        }
     }
 </script>
 
