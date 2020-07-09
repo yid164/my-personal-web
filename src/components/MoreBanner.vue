@@ -75,9 +75,27 @@
                     {
                         title: 'Rage your dream',
                         artist: 'm.o.v.e',
-                        src: 'https://sharefs.yun.kugou.com/202007091140/7781c9b5dd7e30f94deefffb9fc373a2/G197/M08/06/1F/pZQEAF51_36AJ-U9AEOICp-K6Aw640.mp3',
-                        cover: 'https://cdn.myanimelist.net/images/anime/13/6801l.jpg'
-                    }
+                        src: 'https://drive.google.com/file/d/1WZ7tjV0h_PVGGtPHVIsut9rgeYBBadSj/view?usp=sharing',
+                        pic: 'https://cdn.myanimelist.net/images/anime/13/6801l.jpg'
+                    },
+                    {
+                        title: 'Let Me Down Slowly',
+                        artist: 'Alec Benjamin',
+                        src: 'https://drive.google.com/file/d/1OvDd5j5AhcKfA8BWezBTz0njVC2O6G3O/view?usp=sharing',
+                        pic: 'https://images.shazam.com/coverart/t454071084-i1447566311_s400.jpg'
+                    },
+                    {
+                        title: 'That Girl',
+                        artist: 'Olly Murs',
+                        src: 'https://drive.google.com/file/d/12QHQdsekVBbGbgBpIrAqhtMQgZwqkmhI/view?usp=sharing',
+                        pic: 'https://vignette.wikia.nocookie.net/olly-murs-official/images/6/64/That_Girl_%28Ye_Remix%29_Single_Cover.jpg/revision/latest?cb=20200202171835'
+                    },
+                    {
+                        title: '野狼 Disco',
+                        artist: '宝石GEM',
+                        src: 'https://drive.google.com/file/d/15_rn_NwbsPN4vl4MPcH7oRBRl2JbMMI_/view?usp=sharing',
+                        pic: 'https://i.ytimg.com/vi/TWm31xbRVjI/maxresdefault.jpg'
+                    },
                 ],
                 model: 0,
                 more_intro: [
