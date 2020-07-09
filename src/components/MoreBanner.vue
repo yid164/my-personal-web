@@ -28,20 +28,8 @@
         <v-expand-transition>
             <v-sheet v-if="model != null" color="grey lighten-4" tile>
                 <v-scroll-y-transition mode="out-in">
-                    <v-container :key="model" py-5 mx-auto>
-<!--                        <v-row align="center" justify="center" class="fill-height">-->
-<!--                            <v-col cols="12" md="6" class="text-left mb-4">-->
-<!--                                <h3 class="headline mb-3">{{more_intro[model].article}}</h3>-->
-<!--                                <p class="mb-0">{{more_intro[model].content}}</p>-->
-<!--                            </v-col>-->
-
-<!--                            <v-col cols="12" md="6">-->
-<!--                                <v-card elevation="24">-->
-<!--                                    <v-img :src="more_intro[model].img" height="300"/>-->
-<!--                                </v-card>-->
-<!--                            </v-col>-->
-<!--                        </v-row>-->
-                        <v-row align="center" justify="center" class="fill-height" v-if="model===1" py-5 mx-auto>
+                    <v-container :key="model" py-5 mx-auto v-if="model===1">
+                        <v-row align="center" justify="center" class="fill-height" py-5 mx-auto>
                             <v-col cols="12" md="6" class="text-left mb-4">
                                 <h3 class="headline mb-3">My Music List</h3>
                                 <p class="mb-0">I put my favorite musics here</p>
@@ -58,6 +46,10 @@
                             </v-col>
                         </v-row>
                     </v-container>
+
+                    <v-container :key="model" py-5 mx-auto v-if="model===0">
+                        <ProjectHighLights></ProjectHighLights>
+                    </v-container>
                 </v-scroll-y-transition>
             </v-sheet>
         </v-expand-transition>
@@ -66,9 +58,10 @@
 
 <script>
     import aplayer from 'vue-aplayer'
+    import ProjectHighLights from "./BannerComp/ProjectHighLights";
     export default {
         name: "MoreBanner",
-        components: {aplayer},
+        components: {ProjectHighLights, aplayer},
         data(){
             return{
                 musics:[
