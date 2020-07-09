@@ -18,6 +18,7 @@
                     flat
                     @click="toggle"
                 >
+                    <v-card-text class="headline mb-3 white--text">{{item.article}}</v-card-text>
                     <v-fade-transition>
                         <v-overlay v-if="active" color="primary" absolute/>
                     </v-fade-transition>

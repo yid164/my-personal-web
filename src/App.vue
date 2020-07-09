@@ -11,6 +11,7 @@
 <script>
   import NavBarComp from "./components/NavBarComp";
   import Footer from "./components/Footer";
+  import aplayer from "vue-aplayer"
   export default {
     name: 'App',
 
@@ -23,7 +24,8 @@
 
     components: {
       NavBarComp,
-      Footer
+      Footer,
+      aplayer
     },
 
     data(){
