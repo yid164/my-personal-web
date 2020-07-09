@@ -1,12 +1,20 @@
 <template>
     <div class="project">
-        Project Coming Soon
+
     </div>
 </template>
 
 <script>
+    import aplayer from "vue-aplayer"
     export default {
         name: "Experience",
+        components: {aplayer},
+        data(){
+            return {
+
+            }
+
+        }
     }
 </script>
 

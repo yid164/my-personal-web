@@ -29,16 +29,32 @@
             <v-sheet v-if="model != null" color="grey lighten-4" tile>
                 <v-scroll-y-transition mode="out-in">
                     <v-container :key="model" py-5 mx-auto>
-                        <v-row align="center" justify="center" class="fill-height">
-                            <v-col cols="12" md="6" class="text-left mb-4">
-                                <h3 class="headline mb-3">{{more_intro[model].article}}</h3>
-                                <p class="mb-0">{{more_intro[model].content}}</p>
-                            </v-col>
+<!--                        <v-row align="center" justify="center" class="fill-height">-->
+<!--                            <v-col cols="12" md="6" class="text-left mb-4">-->
+<!--                                <h3 class="headline mb-3">{{more_intro[model].article}}</h3>-->
+<!--                                <p class="mb-0">{{more_intro[model].content}}</p>-->
+<!--                            </v-col>-->
 
+<!--                            <v-col cols="12" md="6">-->
+<!--                                <v-card elevation="24">-->
+<!--                                    <v-img :src="more_intro[model].img" height="300"/>-->
+<!--                                </v-card>-->
+<!--                            </v-col>-->
+<!--                        </v-row>-->
+                        <v-row align="center" justify="center" class="fill-height" v-if="model===1" py-5 mx-auto>
+                            <v-col cols="12" md="6" class="text-left mb-4">
+                                <h3 class="headline mb-3">My Music List</h3>
+                                <p class="mb-0">I put my favorite musics here</p>
+                            </v-col>
                             <v-col cols="12" md="6">
-                                <v-card elevation="24">
-                                    <v-img :src="more_intro[model].img" height="300"/>
-                                </v-card>
+
+                                    <aplayer :music="{
+                                title: 'Rage your dream',
+                                artist: 'm.o.v.e',
+                                src: 'https://sharefs.yun.kugou.com/202007091140/7781c9b5dd7e30f94deefffb9fc373a2/G197/M08/06/1F/pZQEAF51_36AJ-U9AEOICp-K6Aw640.mp3',
+                                pic: 'https://cdn.myanimelist.net/images/anime/13/6801l.jpg'
+                                }" theme="#b7daff" :list="musics"></aplayer>
+
                             </v-col>
                         </v-row>
                     </v-container>
@@ -49,10 +65,20 @@
 </template>
 
 <script>
+    import aplayer from 'vue-aplayer'
     export default {
         name: "MoreBanner",
+        components: {aplayer},
         data(){
             return{
+                musics:[
+                    {
+                        title: 'Rage your dream',
+                        artist: 'm.o.v.e',
+                        src: 'https://sharefs.yun.kugou.com/202007091140/7781c9b5dd7e30f94deefffb9fc373a2/G197/M08/06/1F/pZQEAF51_36AJ-U9AEOICp-K6Aw640.mp3',
+                        cover: 'https://cdn.myanimelist.net/images/anime/13/6801l.jpg'
+                    }
+                ],
                 model: 0,
                 more_intro: [
                     {

@@ -78,7 +78,7 @@
                     {text: "About", icon: "mdi-face", route: "/about"},
                     {text: "Timeline", icon: "mdi-timeline-text", route: "/timeline"},
                     {text: "Gallery", icon: "mdi-google-photos", route:"/gallery"},
-                    {text: "Projects", icon: "mdi-post-outline", route: "/project"},
+                    {text: "Projects", icon: "mdi-post-outline", route: "/projects"},
                     {text: "Blog", icon: "mdi-blogger", route: "/blog"}
                 ],
 
