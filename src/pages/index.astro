@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+const basePath = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <html lang="en">
@@ -10,59 +11,94 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Yinsheng (Ken) Dong | Software Engineer</title>
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved === "light" || saved === "dark" ? saved : prefersDark ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
   </head>
-  <body class="min-h-screen bg-slate-950 text-slate-100">
-    <main class="mx-auto max-w-4xl px-6 py-16 sm:py-20">
-      <header class="space-y-4">
-        <p class="text-sm uppercase tracking-[0.2em] text-sky-300">Software Engineer</p>
+  <body class="min-h-screen">
+    <header class="sticky top-0 z-20 px-4 pt-4">
+      <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-3 rounded-2xl px-4 py-3 nav-shell backdrop-blur supports-[backdrop-filter]:bg-[var(--bg)]/70">
+        <a href="#top" class="nav-brand text-base font-semibold tracking-tight">Ken Dong</a>
+        <nav class="flex flex-wrap items-center gap-1 text-sm">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <button
+          id="theme-toggle"
+          type="button"
+          class="theme-toggle"
+        >
+          Theme: <strong id="theme-toggle-label">Dark</strong>
+        </button>
+      </div>
+    </header>
+
+    <main id="top" class="mx-auto max-w-4xl px-6 py-14 sm:py-20">
+      <section class="space-y-5">
+        <p class="text-sm uppercase tracking-[0.2em] accent">Software Engineer</p>
         <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Yinsheng (Ken) Dong</h1>
-        <p class="max-w-2xl text-lg text-slate-300">
+        <p class="max-w-2xl text-lg muted">
           I build high-quality mobile products with a focus on iOS engineering, performance, and user
           experience.
         </p>
-      </header>
+        <div class="flex flex-wrap gap-3">
+          <a class="btn-accent rounded-full px-4 py-2 text-sm font-medium transition" href={`${basePath}resume/`}>
+            View Resume
+          </a>
+          <a class="rounded-full border px-4 py-2 text-sm font-medium transition hover:opacity-90" style="border-color: var(--surface-border);" href="#contact">
+            Contact Me
+          </a>
+        </div>
+      </section>
 
-      <section class="mt-12 rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+      <section id="about" class="mt-12 rounded-2xl p-6 surface-card">
         <h2 class="text-2xl font-semibold">About</h2>
-        <p class="mt-3 leading-7 text-slate-300">
+        <p class="mt-3 leading-7 muted">
           I am a software engineer with strong analytical and problem-solving skills. I have experience
           building and maintaining large-scale iOS applications, including cybersecurity-focused
           capabilities such as VPN, web filtering, and mobile device management.
         </p>
       </section>
 
-      <section class="mt-8">
+      <section id="skills" class="mt-8 rounded-2xl p-6 surface-card">
         <h2 class="text-2xl font-semibold">Core Skills</h2>
         <ul class="mt-4 flex flex-wrap gap-2 text-sm">
-          <li class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1">Swift</li>
-          <li class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1">Objective-C</li>
-          <li class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1">C++</li>
-          <li class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1">iOS</li>
-          <li class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1">Android</li>
-          <li class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1">VPN and MDM</li>
+          <li class="rounded-full border px-3 py-1 surface-card">Swift</li>
+          <li class="rounded-full border px-3 py-1 surface-card">Objective-C</li>
+          <li class="rounded-full border px-3 py-1 surface-card">C++</li>
+          <li class="rounded-full border px-3 py-1 surface-card">iOS</li>
+          <li class="rounded-full border px-3 py-1 surface-card">Android</li>
+          <li class="rounded-full border px-3 py-1 surface-card">VPN and MDM</li>
         </ul>
       </section>
 
-      <section class="mt-8">
+      <section id="experience" class="mt-8 rounded-2xl p-6 surface-card">
         <h2 class="text-2xl font-semibold">Experience Highlights</h2>
         <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+          <article class="rounded-xl p-5 surface-card">
             <h3 class="font-semibold">Microsoft Teams iOS</h3>
-            <p class="mt-2 text-sm text-slate-300">
+            <p class="mt-2 text-sm muted">
               Working on the Calling, Meetings, and Devices (CMD) team to improve the Teams iOS
               experience.
             </p>
           </article>
-          <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+          <article class="rounded-xl p-5 surface-card">
             <h3 class="font-semibold">FortiClient iOS</h3>
-            <p class="mt-2 text-sm text-slate-300">
+            <p class="mt-2 text-sm muted">
               Led and developed features for FortiClient, including IPSec VPN, SSL VPN, SASE, MDM, and
               web filtering.
             </p>
           </article>
-          <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 sm:col-span-2">
+          <article class="rounded-xl p-5 surface-card sm:col-span-2">
             <h3 class="font-semibold">SalonScale Mobile</h3>
-            <p class="mt-2 text-sm text-slate-300">
+            <p class="mt-2 text-sm muted">
               Designed and developed cross-platform mobile features (iOS and Android) and improved
               quality through QA and customer feedback loops.
             </p>
@@ -70,17 +106,72 @@ import "../styles/global.css";
         </div>
       </section>
 
-      <footer class="mt-12 border-t border-slate-800 pt-6 text-sm text-slate-400 space-y-2">
-        <p>
-          Contact:
-          <a class="text-sky-300 hover:text-sky-200" href="mailto:kendong505@gmail.com">kendong505@gmail.com</a>
+      <section id="contact" class="mt-12 rounded-2xl p-6 surface-card">
+        <h2 class="text-2xl font-semibold">Contact</h2>
+        <p class="mt-3 muted">
+          Open to mobile engineering opportunities and collaboration. The fastest way to reach me is by
+          email.
         </p>
-        <p>
-          <a class="text-sky-300 hover:text-sky-200" href="https://www.linkedin.com/in/yinshengdong/">LinkedIn</a>
-          ·
-          <a class="text-sky-300 hover:text-sky-200" href="https://github.com/yid164">GitHub</a>
-        </p>
-      </footer>
+        <div class="mt-5 flex items-center justify-center gap-3">
+          <a class="icon-link" href="mailto:kendong505@gmail.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h13A2.5 2.5 0 0 1 21 7.5v9A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-9Z"></path>
+              <path d="m4 7 8 6 8-6"></path>
+            </svg>
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/yinshengdong/" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+              <path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.38 1.56 1.56 0 0 1 6.94 8.5ZM5.6 9.86h2.67V18H5.6Zm4.2 0h2.55v1.1h.04c.35-.67 1.22-1.37 2.51-1.37 2.69 0 3.19 1.77 3.19 4.07V18h-2.67v-3.84c0-.91-.02-2.08-1.27-2.08-1.27 0-1.46.99-1.46 2.02V18H9.8Z"></path>
+            </svg>
+          </a>
+          <a class="icon-link" href="https://github.com/yid164" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.71c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.12-1.46-1.12-1.46-.91-.63.07-.62.07-.62 1.01.07 1.55 1.04 1.55 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.92 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.52 9.52 0 0 1 12 6.84c.85 0 1.7.11 2.5.33 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.82-2.35 4.66-4.58 4.9.36.32.68.94.68 1.9v2.82c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
     </main>
+    <script is:inline>
+      const links = Array.from(document.querySelectorAll("a.nav-link"));
+      const sections = links
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              const id = `#${entry.target.id}`;
+              for (const link of links) {
+                const isActive = link.getAttribute("href") === id;
+                link.dataset.active = String(isActive);
+                link.setAttribute("aria-current", isActive ? "page" : "false");
+              }
+            }
+          }
+        },
+        { rootMargin: "-35% 0px -55% 0px", threshold: 0.01 }
+      );
+
+      for (const section of sections) observer.observe(section);
+
+      const button = document.getElementById("theme-toggle");
+      const buttonLabel = document.getElementById("theme-toggle-label");
+      const syncThemeLabel = () => {
+        const current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        if (buttonLabel) buttonLabel.textContent = current === "dark" ? "Light" : "Dark";
+      };
+
+      syncThemeLabel();
+
+      button?.addEventListener("click", () => {
+        const current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        const next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        localStorage.setItem("theme", next);
+        syncThemeLabel();
+      });
+    </script>
   </body>
 </html>
