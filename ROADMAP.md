@@ -23,19 +23,32 @@ Optional Phase 5 items can be added after launch.
 
 ---
 
+## Milestones
+
+### 2026-07-27 - Phase 1 Completed
+- Completed Phase 1 visual foundation and navigation polish
+- Added and stabilized dark/light theme behavior across home and resume pages
+- Added dedicated `/resume` page and fixed base-path routing for GitHub Pages
+- Refined contact UX with icon-based actions and centered layout
+- Addressed PR review comments (storage guards + `aria-current` semantics)
+- Branch: `feature/phase1-polish`
+- PR: `#39`
+
+---
+
 ## Phase 1: Foundation and Visual System (Quick Wins)
 
 ### Deliverables
-- [ ] Consistent typography and spacing scale
-- [ ] Color palette (with dark/light support)
-- [ ] Sticky navigation with smooth section links
-- [ ] Polished hero section with CTA buttons
+- [x] Consistent typography and spacing scale
+- [x] Color palette (with dark/light support)
+- [x] Sticky navigation with smooth section links
+- [x] Polished hero section with CTA buttons
 
 ### Tasks
-- [ ] Create a design token section in `src/styles/global.css` (colors, spacing, text sizes)
-- [ ] Add a theme toggle (dark/light mode) and persist preference
-- [ ] Improve `src/pages/index.astro` layout hierarchy (hero, about, skills, experience, contact)
-- [ ] Add responsive nav and active section highlights
+- [x] Create a design token section in `src/styles/global.css` (colors, spacing, text sizes)
+- [x] Add a theme toggle (dark/light mode) and persist preference
+- [x] Improve `src/pages/index.astro` layout hierarchy (hero, about, skills, experience, contact)
+- [x] Add responsive nav and active section highlights
 
 ### Acceptance Criteria
 - Site looks cohesive across mobile/tablet/desktop
