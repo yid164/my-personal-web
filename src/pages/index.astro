@@ -66,48 +66,135 @@ const basePath = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
       <section id="about" class="mt-12 rounded-2xl p-6 surface-card">
         <h2 class="text-2xl font-semibold">About</h2>
         <p class="mt-3 leading-7 muted">
-          I am a software engineer with strong analytical and problem-solving skills. I have experience
-          building and maintaining large-scale iOS applications, including cybersecurity-focused
-          capabilities such as VPN, web filtering, and mobile device management.
+          I'm a software engineer specializing in iOS development with over 4 years of professional experience building production-grade mobile apps. I've shipped features across cybersecurity (VPN, MDM, SASE, web filtering), enterprise communication (Microsoft Teams), and consumer SaaS (SalonScale). I care deeply about performance, reliability, and clean architecture.
         </p>
       </section>
 
       <section id="skills" class="mt-8 rounded-2xl p-6 surface-card">
         <h2 class="text-2xl font-semibold">Core Skills</h2>
-        <ul class="mt-4 flex flex-wrap gap-2 text-sm">
-          <li class="rounded-full border px-3 py-1 surface-card">Swift</li>
-          <li class="rounded-full border px-3 py-1 surface-card">Objective-C</li>
-          <li class="rounded-full border px-3 py-1 surface-card">C++</li>
-          <li class="rounded-full border px-3 py-1 surface-card">iOS</li>
-          <li class="rounded-full border px-3 py-1 surface-card">Android</li>
-          <li class="rounded-full border px-3 py-1 surface-card">VPN and MDM</li>
-        </ul>
+        <div class="mt-4 space-y-4">
+          <div>
+            <p class="text-xs uppercase tracking-widest muted mb-2">Languages</p>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="tag">Swift</li>
+              <li class="tag">Objective-C</li>
+              <li class="tag">C++</li>
+              <li class="tag">Python</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest muted mb-2">Platforms &amp; Frameworks</p>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="tag">iOS / UIKit / SwiftUI</li>
+              <li class="tag">Android</li>
+              <li class="tag">React Native</li>
+              <li class="tag">Combine / RxSwift</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest muted mb-2">Domain Expertise</p>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="tag">VPN (IPSec &amp; SSL)</li>
+              <li class="tag">MDM</li>
+              <li class="tag">SASE</li>
+              <li class="tag">Web Filtering</li>
+              <li class="tag">Push Notifications</li>
+              <li class="tag">WebRTC / Calling</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest muted mb-2">Tools</p>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li class="tag">Xcode</li>
+              <li class="tag">Git</li>
+              <li class="tag">Jira</li>
+              <li class="tag">CI/CD</li>
+              <li class="tag">Charles Proxy</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section id="experience" class="mt-8 rounded-2xl p-6 surface-card">
-        <h2 class="text-2xl font-semibold">Experience Highlights</h2>
-        <div class="mt-4 grid gap-4 sm:grid-cols-2">
-          <article class="rounded-xl p-5 surface-card">
-            <h3 class="font-semibold">Microsoft Teams iOS</h3>
-            <p class="mt-2 text-sm muted">
-              Working on the Calling, Meetings, and Devices (CMD) team to improve the Teams iOS
-              experience.
-            </p>
-          </article>
-          <article class="rounded-xl p-5 surface-card">
-            <h3 class="font-semibold">FortiClient iOS</h3>
-            <p class="mt-2 text-sm muted">
-              Led and developed features for FortiClient, including IPSec VPN, SSL VPN, SASE, MDM, and
-              web filtering.
-            </p>
-          </article>
-          <article class="rounded-xl p-5 surface-card sm:col-span-2">
-            <h3 class="font-semibold">SalonScale Mobile</h3>
-            <p class="mt-2 text-sm muted">
-              Designed and developed cross-platform mobile features (iOS and Android) and improved
-              quality through QA and customer feedback loops.
-            </p>
-          </article>
+        <h2 class="text-2xl font-semibold">Experience</h2>
+        <div class="timeline mt-6">
+
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h3 class="font-semibold">Software Engineer</h3>
+                <p class="text-sm font-medium accent">Microsoft &mdash; Vancouver, BC</p>
+              </div>
+              <span class="tag">June 2026 &ndash; Present</span>
+            </div>
+            <ul class="mt-3 space-y-1 text-sm muted list-disc pl-4">
+              <li>Working on the Calling, Meetings, and Devices (CMD) team for Microsoft Teams iOS.</li>
+              <li>Contributing to core calling and meeting feature reliability across large-scale iOS surfaces.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h3 class="font-semibold">Senior Software Developer</h3>
+                <p class="text-sm font-medium accent">Fortinet &mdash; Burnaby, BC</p>
+              </div>
+              <span class="tag">March 2026 &ndash; May 2026</span>
+            </div>
+            <ul class="mt-3 space-y-1 text-sm muted list-disc pl-4">
+              <li>Led and designed new features in the FortiClient iOS application.</li>
+              <li>Drove technical direction and feature planning within the iOS client team.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-dot dim"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h3 class="font-semibold">Software Developer</h3>
+                <p class="text-sm font-medium accent">Fortinet &mdash; Burnaby, BC</p>
+              </div>
+              <span class="tag">Feb 2024 &ndash; Feb 2026</span>
+            </div>
+            <ul class="mt-3 space-y-1 text-sm muted list-disc pl-4">
+              <li>Main contributor to IPSec VPN in the FortiClient iOS application.</li>
+              <li>Investigated product issues and delivered new features at scale.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-dot dim"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h3 class="font-semibold">iOS Developer</h3>
+                <p class="text-sm font-medium accent">Fortinet &mdash; Burnaby, BC</p>
+              </div>
+              <span class="tag">July 2022 &ndash; Jan 2024</span>
+            </div>
+            <ul class="mt-3 space-y-1 text-sm muted list-disc pl-4">
+              <li>Developed and maintained SSL VPN, SASE, and MDM features for FortiClient iOS.</li>
+              <li>Collaborated with EMS and FortiOS teams to align cross-product functionality.</li>
+              <li>Built and maintained iOS web filtering capabilities and resolved customer-reported issues.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-dot dim"></span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h3 class="font-semibold">Software Developer</h3>
+                <p class="text-sm font-medium accent">SalonScale Technology &mdash; Saskatoon, SK</p>
+              </div>
+              <span class="tag">July 2020 &ndash; July 2022</span>
+            </div>
+            <ul class="mt-3 space-y-1 text-sm muted list-disc pl-4">
+              <li>Designed and developed cross-platform mobile features for iOS and Android.</li>
+              <li>Improved product quality through QA collaboration and customer feedback loops.</li>
+            </ul>
+          </div>
+
         </div>
       </section>
 

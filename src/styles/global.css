@@ -146,3 +146,58 @@ body {
 .btn-accent:hover {
   background: var(--accent-strong);
 }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent),
+    color-mix(in srgb, var(--accent) 20%, var(--surface-border))
+  );
+  border-radius: 9999px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item + .timeline-item {
+  margin-top: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.3rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 9999px;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.timeline-dot.dim {
+  background: color-mix(in srgb, var(--accent) 40%, var(--surface-border));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 40%, var(--surface-border));
+}
+
+.tag {
+  border: 1px solid var(--surface-border);
+  border-radius: 9999px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.65rem;
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+}
