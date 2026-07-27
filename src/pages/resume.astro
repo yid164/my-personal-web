@@ -11,8 +11,13 @@ const basePath = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
     <title>Resume | Yinsheng (Ken) Dong</title>
     <script is:inline>
       (() => {
-        const saved = localStorage.getItem("theme");
         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        let saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch {
+          saved = null;
+        }
         const theme = saved === "light" || saved === "dark" ? saved : prefersDark ? "dark" : "light";
         document.documentElement.setAttribute("data-theme", theme);
       })();

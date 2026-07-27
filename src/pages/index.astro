@@ -13,8 +13,13 @@ const basePath = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
     <title>Yinsheng (Ken) Dong | Software Engineer</title>
     <script is:inline>
       (() => {
-        const saved = localStorage.getItem("theme");
         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        let saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch {
+          saved = null;
+        }
         const theme = saved === "light" || saved === "dark" ? saved : prefersDark ? "dark" : "light";
         document.documentElement.setAttribute("data-theme", theme);
       })();
@@ -146,7 +151,11 @@ const basePath = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
               for (const link of links) {
                 const isActive = link.getAttribute("href") === id;
                 link.dataset.active = String(isActive);
-                link.setAttribute("aria-current", isActive ? "page" : "false");
+                if (isActive) {
+                  link.setAttribute("aria-current", "location");
+                } else {
+                  link.removeAttribute("aria-current");
+                }
               }
             }
           }
@@ -169,7 +178,11 @@ const basePath = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_U
         const current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
         const next = current === "dark" ? "light" : "dark";
         document.documentElement.setAttribute("data-theme", next);
-        localStorage.setItem("theme", next);
+        try {
+          localStorage.setItem("theme", next);
+        } catch {
+          // Ignore storage write failures; theme still applies for current session.
+        }
         syncThemeLabel();
       });
     </script>
